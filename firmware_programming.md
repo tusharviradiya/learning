@@ -82,6 +82,7 @@ Installed Arduino_BuiltIn@1.0.0
 #### C language learning
 - funciton
 - globle variable
+- classes
 
 #### arduino functions
 - setup() : 
@@ -148,3 +149,109 @@ The `Arduino.h` file is the main header file used in Arduino projects. It provid
 ### Summary:
 The `Arduino.h` file provides essential macros, definitions, and function prototypes that abstract away the complexities of low-level hardware interaction on AVR-based microcontrollers. This allows developers to focus on writing higher-level logic without worrying about direct hardware access. It also supports timing, interrupts, serial communication, pin manipulation, and math utilities essential for building Arduino-based projects.
 
+#### arduino toolchain 
+-
+
+#### cross compilation
+- avr-gcc is invoked to cross compile to code
+- conver C code to AVR code
+- generate .o file
+- hex file creation and programming : avr-objcopy are invoked for change the formate of executable file
+
+#### arduino sketches
+- programming file
+
+#### object orianted programming 
+- encapsulation
+
+#### sketch structure
+- always contain steup() function
+- always contain loop() funciton
+- pins : with this we connectt with other devices
+- digital vs analogs : integers vs real number
+
+#### input and output
+- pins functiona of digital and analog functions
+
+#### blink example
+- Delay : delay(msec) stop function with milisecond
+- example : 
+This is a simple Arduino example program (often called a "sketch") designed to blink the built-in LED on an Arduino board. Let me break it down step by step:
+
+### 1. `setup()` Function
+
+```c
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+```
+
+- The `setup()` function runs once when the Arduino is powered on or reset.
+- `pinMode(LED_BUILTIN, OUTPUT);` configures the built-in LED pin as an **output**. This pin is represented by `LED_BUILTIN`, which is predefined to correspond to the pin number connected to the onboard LED. On most Arduino boards, `LED_BUILTIN` refers to pin 13.
+- By setting it to **OUTPUT**, you're telling the Arduino to control this pin and send voltage to it, which is necessary for turning the LED on or off.
+
+### 2. `loop()` Function
+
+```c
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
+}
+```
+
+- The `loop()` function runs continuously in a loop as long as the Arduino is powered on.
+  
+1. `digitalWrite(LED_BUILTIN, HIGH);`  
+   - This command sets the voltage on the `LED_BUILTIN` pin to **HIGH**, which turns the LED on. When a pin is HIGH, it outputs 5V (on most Arduino boards).
+  
+2. `delay(1000);`  
+   - This command pauses the execution of the program for 1000 milliseconds (or 1 second). During this time, the LED remains on.
+  
+3. `digitalWrite(LED_BUILTIN, LOW);`  
+   - This sets the voltage on the `LED_BUILTIN` pin to **LOW**, which turns the LED off. When a pin is LOW, it outputs 0V.
+
+4. `delay(1000);`  
+   - Again, the program pauses for 1 second while the LED is off.
+
+### Summary of Behavior
+- The LED is turned **on** for 1 second (`HIGH`).
+- Then, it is turned **off** for 1 second (`LOW`).
+- This process repeats forever, making the LED blink on and off every second.
+
+This is a basic way to demonstrate controlling digital output pins and using delay functions in an Arduino program.
+
+- one more example of this blink variations
+```c
+// C++ code
+//
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  for(int i = 0;i < 5; i++){
+    digitalWrite(LED_BUILTIN, HIGH);  // Turn the LED on
+    delay(500);               // Wait for 0.5 seconds
+    digitalWrite(LED_BUILTIN, LOW);   // Turn the LED off
+    delay(500);
+  }
+  for(int i=0;i<5;i++){
+    digitalWrite(LED_BUILTIN, HIGH);  // Turn the LED on
+  	delay(2000);               // Wait for 2 seconds
+  	digitalWrite(LED_BUILTIN, LOW);   // Turn the LED off
+  	delay(2000);   
+  }
+}
+```
+
+#### debugging of software
+- debug and trach
+- debug via serial : serial protocols
+
+
+# microcontroller basics
+- continue......
