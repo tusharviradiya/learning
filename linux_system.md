@@ -1,0 +1,8 @@
+- sudo dmesg
+- This will print quite a bit of output you can scroll through, making it a bit challenging to find what you're looking for, and much of what you read will most likely seem like gibberish. The good news is that errors print out in red, so you can quickly scroll to find anything that might be wrong.
+- dmesg -w
+- uname -r
+- lscpu
+- lsblk
+- sudo dmidecode -t system
+- 
