@@ -66,3 +66,51 @@ How it relates to ESP32: The ESP32 has two DAC channels, which you can use if yo
             Sending sensor data (temperature, gas, or moisture readings) to a mobile app via BLE.
             Receiving commands from a BLE-capable smartphone or device.
         BLE is often used for low-power applications where Wi-Fi might be overkill, such as connecting a sensor to your phone over a short distance.
+
+#### ESP-IDF
+- The sentence means that ESP-IDF (Espressif IoT Development Framework) is a software platform designed specifically to help developers build applications for Espressif SoCs (System-on-Chips). These are small, integrated circuits used in IoT devices, such as the ESP32.
+- Using ESP-IDF (Espressif IoT Development Framework), you can do firmware programming for the ESP32. ESP-IDF provides all the necessary tools, libraries, and APIs to develop, build, and upload firmware to the ESP32 SoC.
+- installation steps : 
+        Toolchain to compile code for ESP32
+
+        Build tools - CMake and Ninja to build a full Application for ESP32
+
+        ESP-IDF that essentially contains API (software libraries and source code) for ESP32 and scripts to operate the Toolchain
+
+#### protocols
+- with bme680 sensors : 
+
+# monty device component
+
+#### AMS1117
+- The AMS1117 series of adjustable and fixed voltage regulators are designed to provide up to1A output current and to operate
+down to 1V input-to-output differential. The dropout voltage of the device is guaranteed maximum 1.3V, decreasing at lower
+load currents.
+
+#### BQ51051B 
+- The BQ51051B is a wireless power receiver IC from Texas Instruments. It's specifically designed for wireless charging applications that conform to the Qi wireless power standard. Here's a detailed breakdown of its key features and use:
+  
+#### BT832F
+- With Bluetooth 5 mesh network protocol stacks and BlueNor BT832 Series modules, no hardware redesign is needed to reach any node in mesh network. A host board design can accommodate all modules listed above. For  wide area network, BT832X can be used in Relay node. For mesh networks with many nodes, BT840F with CryptoCell-310 co-processor is recommended for Relay node.
+
+#### nRF52832 
+- The nRF52832 is multiprotocol capable with full protocol concurrency. It supports Bluetooth Low Energy, including the high-speed 2 Mbps feature. Bluetooth mesh can be run concurrently with Bluetooth LE, enabling smartphones to provision, commission, configure and control mesh nodes.
+
+#### MCU
+- full form : micro controller unit
+- MCU stands for Micro Controller Unit. It's a small computer on a single integrated circuit (IC) that controls the operations of a device or system. MCUs are also known as micoms or one chip computers.
+
+#### DRAM and SRAM 
+- https://blog.purestorage.com/purely-educational/flash-memory-vs-ram/
+
+#### RAM & ROM & Flash memory
+- RAM is after your PC on, ROM is store permenetly and flash memotry do thing when pc or off also 
+
+#### install nRF connect line tool 
+- https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download?lang=en#infotabs
+- isntall extension tools for nRF connect with vs code
+- in vs code install toolchian first after that select mangae skds
+- 
+
+#### A131L device component :
+- transmmiter
